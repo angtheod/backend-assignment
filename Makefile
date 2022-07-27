@@ -24,3 +24,6 @@ bash-app:
 
 bash-db:
 	docker-compose exec db bash
+
+tests:
+	src/vendor/phpunit/phpunit/phpunit --configuration=src/phpunit.xml src/tests

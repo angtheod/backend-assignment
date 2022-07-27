@@ -1,9 +1,34 @@
-# Installation
-```
+## Build
+Create directory with enough permissions (e.g. 775) and cd into it
+```shell
 git clone -b angelos --single-branch https://github.com/angtheod/backend-assignment.git .
 make install
 ```
 
+## Makefile extras
+`make down`
+Stop and remove containers and networks
+
+`make up`
+Start containers
+
+`make build`
+Re-build (with cache)
+
+`make bash-app`
+Enter app container's shell
+
+`make bash-db`
+Enter db container's shell
+
+`make tests`
+Run all PHPUnit tests
+
+
+## Components
+Docker 20.10.17 - Docker Compose v2.6.1 - PHP 8.1.5 - Lumen 9.0.4 - Mysql 8.0.29 - Composer 2.4
+
+___________________________________________________________
 
 # Vessels Tracks API
 
