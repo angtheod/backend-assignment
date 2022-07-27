@@ -17,11 +17,10 @@ config:
 install: build-no-cache get-app get-deps
 
 get-app:
-	git clone --recurse-submodules https://github.com/angtheod/vessels-tracks-api src
-	#docker-compose exec api git submodule add https://github.com/angtheod/vessels-tracks-api src
+	git clone --recurse-submodules https://github.com/angtheod/backend-assignment.git src
 
 get-deps:
-	docker-compose exec api composer create-project --working-dir=/var/www/html/src --prefer-dist laravel/lumen
+	docker-compose exec api composer install --working-dir=/var/www/html/src --prefer-dist
 
 shell-api:
 	docker-compose exec api bash

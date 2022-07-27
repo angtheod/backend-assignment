@@ -16,7 +16,7 @@ services:
       - db
     volumes:
       - ./src:/var/www/html/src
-    #command: php -S api:8080 -t src/lumen/public
+    #command: php -S api:8080 -t src/public
     restart: always
 
   db:
