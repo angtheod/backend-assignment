@@ -1,3 +1,10 @@
+# Installation
+```
+git clone -b angelos --single-branch https://github.com/angtheod/backend-assignment.git .
+make install
+```
+
+
 # Vessels Tracks API
 
 Your task is to create a **RESTful API** that serves vessel tracks from a raw vessel positions data-source.

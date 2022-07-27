@@ -11,19 +11,16 @@ build-no-cache: down
 build: down
 	docker-compose up --build -d
 
-config:
-	cp src/.env.example src/.env
+install: build-no-cache app deps
 
-install: build-no-cache get-app get-deps
+app:
+	git submodule update --init
 
-get-app:
-	git clone --recurse-submodules https://github.com/angtheod/backend-assignment.git src
+deps:
+	docker-compose exec api composer install --working-dir=/var/www/html/src
 
-get-deps:
-	docker-compose exec api composer install --working-dir=/var/www/html/src --prefer-dist
-
-shell-api:
+bash-app:
 	docker-compose exec api bash
 
-shell-db:
+bash-db:
 	docker-compose exec db bash
