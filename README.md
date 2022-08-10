@@ -19,6 +19,18 @@ Start containers
 `make build`
 Re-build (with cache)
 
+`make deps-update`
+Update dependencies
+
+`make migrate`
+Truncate tables and run a fresh migration
+
+`make seed`
+Seed tables with data as defined within the application
+
+`make web-server`
+Start the php built-in web server
+
 `make bash-app`
 Enter app container's shell
 
@@ -30,7 +42,7 @@ Run all PHPUnit tests
 
 
 ## Components
-Docker 20.10.17 - Docker Compose v2.6.1 - PHP 8.1.5 - Lumen 9.0.4 - Mysql 8.0.29 - Composer 2.4
+Docker 20.10.17 - Docker Compose v2.6.1 - PHP 8.1.5 - Lumen 9.1.0 - Mysql 8.0.29 - Composer 2.4
 
 ___________________________________________________________
 
