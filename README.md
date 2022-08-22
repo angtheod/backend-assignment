@@ -4,9 +4,9 @@ Create directory with enough permissions (e.g. 775) and cd into it
 git clone -b angelos --single-branch https://github.com/angtheod/backend-assignment.git .
 make install
 ```
-After install finishes building the containers, fetch the application code and install the dependencies
-it will output a random 32-length string which you should copy and paste in the APP_KEY entry of your
-.env configuration file. Finally, it will start the php built-in development web server which can be accessed at http://localhost:8081/
+The make install command builds the containers (without cache), fetches the application code, installs dependencies,
+configures the application, truncates tables and runs migrations, seeds database tables and finally
+it starts the php built-in development web server which can be accessed at http://localhost:8081/
 
 
 ## Makefile extras
