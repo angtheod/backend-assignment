@@ -52,3 +52,6 @@ bash-db:
 
 tests:
 	src/vendor/phpunit/phpunit/phpunit --configuration=src/phpunit.xml src/tests
+
+docs:
+	src/vendor/bin/openapi src --output src/docs/openapi.yml --format yaml --pattern "*.php" --exclude src/vendor --version 3.0.0

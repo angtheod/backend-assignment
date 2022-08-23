@@ -40,6 +40,9 @@ Enter db container's shell
 `make tests`
 Run all PHPUnit tests
 
+`make docs`
+Create OpenApi v3 documentation
+
 
 ## Components
 Docker 20.10.17 - Docker Compose v2.6.1 - PHP 8.1.5 - Lumen 9.1.0 - Mysql 8.0.29 - Composer 2.4
